@@ -1,7 +1,5 @@
 import cvxpy as cp
 import pandas as pd
-import numpy as np
-import random as rd
 
 n = 24
 u = cp.Variable(24, integer = True)
