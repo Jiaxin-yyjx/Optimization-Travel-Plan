@@ -8,11 +8,11 @@ Due to the travel constraints made by the officials to prevent the spreading of 
 - FlightData.csv: the dataset of all plane tickets
 - README.md
 
-### Codes and descriptions
+## Codes and descriptions
 We are trying to minimize the total flight cost of this trip under the condition that we are only going to visit each city once and that we will at least visit each city once. Therefore, we calculate the cost of flight 〖 C〗_ij  between each pair of cities i and j. Also, we did some research and found out that according to United Airline, standard checked baggage fees for US domestic flights: First bag: $35.00 USD. We made an assumption that all the travelers will only be carrying one baggage. Thus, we added an extra 35 dollars on top of the cost for each flight. The total cost of flights for the whole trip is then the sum of the total costs of the edges included in the trip.
 
-### Goal
+## Goal
 In this Multiple Traveling Salesman Problem, we have a list of all cities we need to visit and a dataset containing all plane ticket price between cities. Our goal is to minimize the cost of airplane tickets with the route that can start at Columbus; travel through all cities in the city list once and turn back to Columbus. Besides that, the summation of all plane tickets cannot exceed $4000, all plane tickets are non-stop, and we cannot use other cities as a transition to our destination.
 
-### Result
+## Result
 Columbus -> San Diego-> Washington DC -> Salt Lake City -> New York -> Las Vegas -> Chicago -> Portland -> Phoenix -> Indianapolis -> Los Angeles -> Detroit -> New Orleans -> Houston -> Nashville -> San Francisco -> Seattle -> Dallas -> Pittsburgh -> Fairbanks -> Albuquerque -> Miami -> Philiadelphia -> Denver -> Columbus
