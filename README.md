@@ -13,6 +13,11 @@
 - ISE3230_Group25_Presentation.pptx: the presentation slides
 - README.md
 
+## Team Members
+- Jiaxin Yang
+- Ben He
+- Yuyang He
+
 ## Codes and descriptions
 We are trying to minimize the total flight cost of this trip under the condition that we are only going to visit each city once and that we will at least visit each city once. Therefore, we calculate the cost of flight Cij  between each pair of cities i and j. Also, we did some research and found out that according to United Airline, standard checked baggage fees for US domestic flights: First bag: $35.00 USD. We made an assumption that all the travelers will only be carrying one baggage. Thus, we added an extra 35 dollars on top of the cost for each flight. The total cost of flights for the whole trip is then the sum of the total costs of the edges included in the trip.
 
