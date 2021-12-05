@@ -16,3 +16,4 @@ In this Multiple Traveling Salesman Problem, we have a list of all cities we nee
 
 ## Result
 Columbus -> San Diego-> Washington DC -> Salt Lake City -> New York -> Las Vegas -> Chicago -> Portland -> Phoenix -> Indianapolis -> Los Angeles -> Detroit -> New Orleans -> Houston -> Nashville -> San Francisco -> Seattle -> Dallas -> Pittsburgh -> Fairbanks -> Albuquerque -> Miami -> Philiadelphia -> Denver -> Columbus
+Minimum cost: $3001.0
