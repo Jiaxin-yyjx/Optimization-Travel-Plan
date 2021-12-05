@@ -4,9 +4,10 @@ import pandas as pd
 n = 24
 u = cp.Variable(24, integer = True)
 
-flight = pd.read_csv('/Users/heben/Downloads/DataFind.csv') 
+price = pd.read_csv('D:/OSU/Courses/AU21/ISE3230/ISE3230_Group25/FlightData.csv') 
+price.drop(columns = ['Cities'], inplace = True)
 
-C = flight.values
+C = price.values
 
 X = cp.Variable((24, 24), boolean = True) # Vector Variables
 MAX_ITER = 50
@@ -16,7 +17,7 @@ cost = 0
 
 for i in range(n):
     for j in range(n):
-        cost += (C[i,j]+35)*X[i,j]
+        cost += ((C[i,j]+35)*X[i,j])
 
     
 for i in range(n):
@@ -43,7 +44,7 @@ for i in range(1, 24):
        else:
            constraints.append(u[i] - u[j] + (n) * X[i, j] <= n - 1)
            
-for i in range(2,24): constraints.append(u[i] >= 1)
+for i in range(1,24): constraints.append(u[i] >= 1)
 for i in range(1,24): constraints.append(u[i] <= 23)
 
 
@@ -57,4 +58,4 @@ X[i,i]
 X[j,j]
 
 print("u =")
-print(u.value)
+print(u.value + 1)
