@@ -1,5 +1,6 @@
 import cvxpy as cp
 import pandas as pd
+import numpy as np
 
 n = 24
 u = cp.Variable(24, nonneg = True)
@@ -14,11 +15,12 @@ MAX_ITER = 50
 RESTARTS = 5
 constraints = []
 cost = 0
+k = np.full((24, 24), 35)
 
 # objective function
 for i in range(n):
     for j in range(n):
-        cost += (C[i,j]+35)*X[i,j]
+        cost += (C[i,j]+k[i, j])*X[i,j]
 
 # constraints 
 for i in range(n):
@@ -35,7 +37,7 @@ for j in range(n):
     
 for i in range(n):
     for j in range(n):
-        constraints.append((C[i,j]+35)*X[i,j] <=4000)
+        constraints.append((C[i,j]+k[i, j])*X[i,j] <=4000)
         
 # find the subtours        
 for i in range(1, 24):
