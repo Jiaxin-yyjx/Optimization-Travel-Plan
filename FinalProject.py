@@ -2,7 +2,7 @@ import cvxpy as cp
 import pandas as pd
 
 n = 24
-u = cp.Variable(24, integer = True)
+u = cp.Variable(24, nonneg = True)
 
 price = pd.read_csv('D:/OSU/Courses/AU21/ISE3230/ISE3230_Group25/FlightData.csv') 
 price.drop(columns = ['Cities'], inplace = True)
@@ -15,11 +15,12 @@ RESTARTS = 5
 constraints = []
 cost = 0
 
+# objective function
 for i in range(n):
     for j in range(n):
-        cost += ((C[i,j]+35)*X[i,j])
+        cost += (C[i,j]+35)*X[i,j]
 
-    
+# constraints 
 for i in range(n):
    constraints.append(X[i,0] + X[i,1] + X[i,2] + X[i,3] + X[i,4] +
                       X[i,5] + X[i,6] + X[i,7] + X[i,8] + X[i,9] +
@@ -34,9 +35,9 @@ for j in range(n):
     
 for i in range(n):
     for j in range(n):
-        constraints.append((C[i,j]+35)*X[i,j]<=4000)
+        constraints.append((C[i,j]+35)*X[i,j] <=4000)
         
-        
+# find the subtours        
 for i in range(1, 24):
    for j in range(1, 24):
        if i == j:
@@ -58,4 +59,4 @@ X[i,i]
 X[j,j]
 
 print("u =")
-print(u.value + 1)
+print(u.value)
