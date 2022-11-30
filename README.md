@@ -1,4 +1,4 @@
-# ISE3230_Group25
+# Optimization Graduating Travel Plan
 
 ### Introduction & Motivation
   Due to the travel constraints made by the officials to prevent the spreading of COVID-19, a lot of students have no choice but to cancel their travel plans made earlier. However, recently, since the vaccination was invented and the number of people who have been vaccinated is increasing, the number of new COVID-19 cases has been in a decreasing tendency, which has loosened the travel ban between states and even internationally. Since all members in our group have not traveled for more than two years and will graduate next year, we are planning to take a crazy graduation trip that travels around the United States.   
